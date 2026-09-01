@@ -4,6 +4,8 @@ Short-sea freight operator landing — Bass Strait and the Tasman. Ro-ro, contai
 project cargo between Webb Dock (Melbourne), Devonport, Burnie, Bell Bay and a weekly
 Tasman lane to Auckland / Lyttelton.
 
+Live demo: https://vale.little.website/
+
 Built with Astro 5 (static output) and a plain CSS design system. No CMS, no auth,
 no payments, no booking engine — contact goes straight to `mailto:sales@little.cloud`.
 
@@ -36,3 +38,5 @@ backend by design.
 ## License
 
 MIT — see LICENSE. Photography via Pixabay (credits in footer).
+Template ID: vale  Category: Landing Page
+Repository: https://github.com/Little-Devs/template-vale
