@@ -1,0 +1,28 @@
+---
+import { site } from '../data/site';
+const { cargo } = site;
+---
+<section class="section section--ink" id="cargo">
+  <div class="container">
+    <p class="eyebrow">{cargo.kicker}</p>
+    <h2 class="display section-title">{cargo.title}</h2>
+    <p class="section-lede">{cargo.lede}</p>
+    <div class="cargo__grid">
+      {cargo.items.map((item) => (
+        <article class="cargo__cell">
+          <span class="cargo__tag">{item.tag}</span>
+          <h3 class="cargo__name">{item.name}</h3>
+          <p class="cargo__desc">{item.desc}</p>
+          <ul class="cargo__specs">
+            {item.specs.map((sp) => (
+              <li><span class="k">{sp.k}</span><span class="v">{sp.v}</span></li>
+            ))}
+          </ul>
+        </article>
+      ))}
+    </div>
+    <div class="cargo__strip" role="img" aria-label={cargo.stripLabel}>
+      <span class="cargo__strip-label">{cargo.stripLabel}</span>
+    </div>
+  </div>
+</section>

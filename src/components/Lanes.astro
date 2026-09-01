@@ -1,0 +1,30 @@
+---
+import { site } from '../data/site';
+const { lanes } = site;
+---
+<section class="section" id="lanes">
+  <div class="container">
+    <p class="eyebrow">{lanes.kicker}</p>
+    <h2 class="display section-title">{lanes.title}</h2>
+    <p class="section-lede">{lanes.lede}</p>
+    <div class="lanes__grid">
+      {lanes.items.map((lane) => (
+        <article class="lane">
+          <div class="lane__img">
+            <img src={lane.img} alt={lane.alt} width="800" height="420" />
+          </div>
+          <div class="lane__body">
+            <span class="lane__code">{lane.code}</span>
+            <h3 class="lane__name">{lane.name}</h3>
+            <p class="lane__desc">{lane.desc}</p>
+            <ul class="lane__specs">
+              {lane.specs.map((sp) => (
+                <li><span class="k">{sp.k}</span><span class="v">{sp.v}</span></li>
+              ))}
+            </ul>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

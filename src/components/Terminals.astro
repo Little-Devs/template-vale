@@ -1,0 +1,26 @@
+---
+import { site } from '../data/site';
+const { terminals } = site;
+---
+<section class="section section--plate" id="terminals">
+  <div class="container">
+    <p class="eyebrow">{terminals.kicker}</p>
+    <h2 class="display section-title">{terminals.title}</h2>
+    <p class="section-lede">{terminals.lede}</p>
+    <ul class="terminals__list">
+      {terminals.items.map((t) => (
+        <li class="terminal">
+          <div>
+            <h3 class="terminal__name">{t.name}</h3>
+            <span class="terminal__port">{t.port}</span>
+          </div>
+          <ul class="terminal__specs">
+            {t.specs.map((s) => (<li>{s}</li>))}
+          </ul>
+          <p class="terminal__note">{t.note}</p>
+        </li>
+      ))}
+    </ul>
+    <p class="terminals__foot">{terminals.foot}</p>
+  </div>
+</section>

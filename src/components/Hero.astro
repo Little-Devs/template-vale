@@ -1,0 +1,22 @@
+---
+import { site } from '../data/site';
+const { hero } = site;
+---
+<section class="hero" id="top">
+  <div class="hero__bg" aria-hidden="true"></div>
+  <div class="hero__scrim" aria-hidden="true"></div>
+  <div class="container hero__inner">
+    <p class="eyebrow">{hero.kicker}</p>
+    <h1 class="display hero__title" set:html={hero.titleHtml} />
+    <p class="hero__lede">{hero.lede}</p>
+    <div class="hero__actions">
+      <a class="btn btn--signal" href={hero.primaryCta.href}>{hero.primaryCta.label}</a>
+      <a class="btn btn--ghost" href={hero.secondaryCta.href}>{hero.secondaryCta.label}</a>
+    </div>
+    <dl class="hero__facts">
+      {hero.facts.map((f) => (
+        <div><dt>{f.k}</dt><dd><strong>{f.v}</strong></dd></div>
+      ))}
+    </dl>
+  </div>
+</section>
