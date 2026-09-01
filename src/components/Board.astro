@@ -1,0 +1,63 @@
+---
+import { site } from '../data/site';
+const { board } = site;
+---
+<section class="section board" id="board">
+  <div class="container">
+    <div class="board__head">
+      <div>
+        <p class="eyebrow">{board.kicker}</p>
+        <h2 class="display section-title">{board.title}</h2>
+      </div>
+      <p class="board__updated">Updated <b>{board.updated}</b></p>
+    </div>
+    <div class="gate" aria-label="Weather and berth gates">
+      {board.gate.map((g) => (
+        <div class="gate__item">
+          <span class="gate__pulse" aria-hidden="true"></span>
+          <span>{g.k}</span>
+          <span class="gate__state">{g.v}</span>
+        </div>
+      ))}
+    </div>
+    <div class="board__grid">
+      <figure class="board__chart">
+        <svg viewBox="0 0 420 320" role="img" aria-label="Schematic of Bass Strait from Webb Dock to Devonport and Burnie, with a Tasman lane east">
+          <rect class="chart-land" x="18" y="18" width="384" height="88" />
+          <rect class="chart-land" x="40" y="214" width="240" height="86" />
+          <text class="chart-label chart-label--port" x="30" y="44">VIC · WEBB DOCK</text>
+          <text class="chart-label" x="30" y="64">PORT MELBOURNE</text>
+          <text class="chart-label chart-label--port" x="52" y="244">TAS · DEVONPORT</text>
+          <text class="chart-label" x="52" y="262">BURNIE · BELL BAY</text>
+          <path class="chart-lane" d="M90 108 C 110 150, 120 170, 130 214" />
+          <path class="chart-lane" d="M160 108 C 150 155, 200 175, 210 214" />
+          <path class="chart-lane chart-lane--tasman" d="M300 70 C 360 90, 390 140, 402 210" />
+          <circle class="chart-port chart-port--home" cx="90" cy="108" r="6" />
+          <circle class="chart-port" cx="130" cy="214" r="5" />
+          <circle class="chart-port" cx="210" cy="214" r="5" />
+          <circle class="chart-gate" cx="160" cy="160" r="14" />
+          <text class="chart-label chart-label--lane" x="168" y="156">BASS</text>
+          <text class="chart-label chart-label--lane" x="318" y="120">TASMAN</text>
+          <text class="chart-label" x="300" y="300">AKL / LYT →</text>
+        </svg>
+      </figure>
+      <div class="board__table" role="table" aria-label="This week's sailings">
+        <div class="sailing sailing--head" role="row">
+          <span>Code</span>
+          <span>Vessel</span>
+          <span>Lane</span>
+          <span>ETD</span>
+        </div>
+        {board.sailings.map((s) => (
+          <article class="sailing" role="row">
+            <span class="sailing__code">{s.code}</span>
+            <span class="sailing__vessel">{s.vessel}</span>
+            <span class="sailing__lane">{s.lane}</span>
+            <span class="sailing__etd">{s.etd}<small>{s.eta}</small></span>
+            <span class:list={['status', 'sailing__status', `status--${s.status}`]}>{s.statusLabel}</span>
+          </article>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

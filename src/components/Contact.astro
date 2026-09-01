@@ -1,0 +1,65 @@
+---
+import { site } from '../data/site';
+---
+<section class="section contact" id="contact">
+  <div class="container">
+    <p class="eyebrow">Slot request</p>
+    <h2 class="display section-title">Write the desk</h2>
+    <p class="section-lede">No booking engine. A mail with lane, cargo, and window is enough. We answer from the shed.</p>
+    <div class="contact__grid">
+      <div class="contact__details">
+        <div class="contact__item">
+          <span class="k">Mail</span>
+          <span class="v"><a href={`mailto:${site.contact.email}`}>{site.contact.email}</a></span>
+        </div>
+        <div class="contact__item">
+          <span class="k">Ops desk</span>
+          <span class="v">{site.contact.phone}</span>
+        </div>
+        <div class="contact__item">
+          <span class="k">Shed</span>
+          <span class="v">{site.contact.address}</span>
+        </div>
+        <div class="contact__item">
+          <span class="k">Windows</span>
+          <span class="v">{site.contact.hours}</span>
+        </div>
+        <p class="contact__note">Form opens your mail client to sales@little.cloud. Nothing is stored here.</p>
+      </div>
+      <form class="form" action="mailto:sales@little.cloud" method="post" enctype="text/plain">
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required />
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required />
+        </div>
+        <div class="field">
+          <label for="lane">Lane</label>
+          <select id="lane" name="lane">
+            <option>Bass Strait overnight</option>
+            <option>Tasman weekly</option>
+            <option>Project / survey</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="cargo">Cargo</label>
+          <select id="cargo-type" name="cargo">
+            <option>Ro-ro / wheeled</option>
+            <option>Containers</option>
+            <option>Break-bulk</option>
+          </select>
+        </div>
+        <div class="field field--wide">
+          <label for="note">Window and notes</label>
+          <textarea id="note" name="note" rows="4" placeholder="ETD window, tonnes, survey if needed"></textarea>
+        </div>
+        <div class="form__actions">
+          <button class="btn btn--signal" type="submit">Open mail to sales@little.cloud</button>
+          <span class="form__hint">mailto · no backend</span>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
