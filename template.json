@@ -1,0 +1,92 @@
+{
+  "id": "vale",
+  "name": "Vale Freight",
+  "description": "Bass Strait and Tasman short-sea freight operator landing with a schematic sailing board, lane roster, cargo specs and mailto slot requests. Astro 5 static site, plain CSS design system.",
+  "category": "landing-page",
+  "subcategory": "freight",
+  "repository": "https://github.com/Little-Devs/template-vale",
+  "demoUrl": "https://vale.little.website/",
+  "previewImage": "",
+  "techStack": {
+    "framework": "Astro",
+    "version": "5.17.1",
+    "styling": "CSS variables",
+    "scripting": "TypeScript",
+    "buildTool": "Vite"
+  },
+  "features": [
+    "Bass Strait and Tasman short-sea freight operator landing",
+    "Light-custom: logo, colours, fonts, and copy",
+    "Section on/off for hero, board, lanes, cargo, terminals, and contact",
+    "Schematic sailing board and lane roster",
+    "Mailto slot-request form",
+    "Night harbour steel and signal-yellow palette",
+    "Fully responsive Astro SSG"
+  ],
+  "aesthetic": {
+    "style": "Night harbour operations",
+    "description": "Bass Strait and Tasman short-sea freight operator landing",
+    "fonts": {
+      "display": "Big Shoulders Stencil Display",
+      "body": "Saira",
+      "mono": "IBM Plex Mono",
+      "sans": "Saira",
+      "primary": "Big Shoulders Stencil Display"
+    },
+    "colors": {
+      "primary": "#0b1c33",
+      "primaryName": "Night navy",
+      "accent": "#f5c518",
+      "accentName": "Signal yellow",
+      "background": "#0a0e14",
+      "backgroundName": "Ink",
+      "steel": "#8a93a0",
+      "navy": "#0b1c33",
+      "signal": "#f5c518",
+      "plate": "#d5d8de",
+      "ink": "#0a0e14",
+      "foam": "#e8edf4"
+    }
+  },
+  "sections": [
+    "Hero",
+    "Board",
+    "Lanes",
+    "Cargo",
+    "Terminals",
+    "Contact"
+  ],
+  "useCases": [
+    "Short-sea freight operators",
+    "Port and terminal operators",
+    "B2B shipping and logistics",
+    "Ro-ro and project cargo lines"
+  ],
+  "customization": {
+    "difficulty": "easy",
+    "colorScheme": "CSS variables",
+    "typography": "Google Fonts (Big Shoulders Stencil Display, Saira, IBM Plex Mono)",
+    "layout": "CSS Grid + Flexbox"
+  },
+  "performance": {
+    "framework": "Astro (SSG)",
+    "cssOnly": "Most animations",
+    "lighthouse": "90+"
+  },
+  "license": "MIT",
+  "author": "Little-Devs",
+  "createdAt": "2026-09-01",
+  "lastUpdated": "2026-09-01",
+  "tags": [
+    "landing-page",
+    "freight",
+    "shipping",
+    "b2b",
+    "port",
+    "short-sea",
+    "dark",
+    "astro",
+    "ssg"
+  ],
+  "version": "1.0.0"
+}
